@@ -1,10 +1,22 @@
+// @flow
 import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
+import type classnames from 'classnames';
 import noop from '../../utils/noop';
 
 import css from './Btn.css';
 
-export default class Btn extends Component {
+type Props = {
+  children: React.Node,
+  className?: string,
+  onClick: void => void,
+  type: 'submit' | 'reset' | 'button' | 'menu',
+  disabled: bool,
+  context: 'default' | 'primary' | 'danger' | 'action' | 'whiteout',
+  variant: 'default' | 'hollow' | 'subtle',
+  priority: 'high' | 'normal',
+};
+
+export default class Btn extends Component<Props> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,

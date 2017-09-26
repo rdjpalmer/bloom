@@ -1,0 +1,15 @@
+[ignore]
+.*/storybook/.*
+.*/config/.*
+.*/storybook-static/.*
+
+[include]
+.*/components/.*
+.*/styleguide/.*
+.*/utils/.*
+
+[libs]
+
+[lints]
+
+[options]
