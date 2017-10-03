@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import SiteHeader from './components/SiteHeader/SiteHeader';
 import Navigation from './components/Navigation/Navigation';
@@ -56,6 +57,10 @@ export default class Styleguide extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <div className={ css.root }>
+            <Helmet
+              titleTemplate="%s | Bloom | Appear Here's style guide and pattern library"
+              defaultTitle="Bloom | Appear Here's style guide and pattern library"
+            />
             <BtnContainer className={ css.menuBtn } onClick={ this.openNavigation }>
               <Icon className={ css.menuIcon } name="menu" />
               <ScreenReadable>Open menu</ScreenReadable>
